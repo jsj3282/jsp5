@@ -8,7 +8,12 @@
 </head>
 <body>el01.jsp<br>
 	
-	
+	<h1>세션 : ${mySession }</h1>
+	<h1>세션 : ${sessionScope.mySession }</h1>
+<hr>	
+	\${(5>2) || (5<2)} : ${(5>2) || (5<2)} ==> \${false or true} : ${false or true}<br>
+	\${(5>2) && (5>2)} : ${(5>2) && (5>2)} ==> \${true and true} : ${true and true}<br>
+	\${!(5>2)} : ${!(5>2)} : \${not true } : ${not true } <br>
 <hr>
 	\${5 == 2} : ${5 == 2} => \${5 eq 5} : ${5 eq 5}<br>
 	\${5 != 2} : ${5 != 2} => \${5 ne 2} : ${5 ne 2}<br>

@@ -9,8 +9,25 @@
 <title>Insert title here</title>
 </head>
 <body>jstl01.jsp<br>
-	
-	
+	<c:set var="test" value="홍길동"/>
+	<c:choose>
+		<c:when test="${test == '홍길동' }"><!-- if -->
+			<b>홍길동이 같다</b>
+		</c:when>
+		<c:when test="${test == '김길동' }"><!-- else if -->
+			<b>김길동이 같다</b>
+		</c:when>
+		<c:otherwise><!-- else-->
+			<b>같은 값이 없다</b>
+		</c:otherwise>
+	</c:choose>
+<hr>
+	<!-- c:import url="el01.jsp"/-->
+	<!--c:redirect url="el01.jsp"/--><!-- 결과 끝나면 여기로 넘겨줌 -->
+	<c:set var="mySession" value="kakaka" scope="session"/>
+	<a href="el01.jsp">세션 생성 후 el01 이동</a>
+	<c:remove var="mySession"/>
+<hr>	
 	<%
 		String[] name = {"111", "222", "333", "444"};
 		ArrayList arr = new ArrayList();
